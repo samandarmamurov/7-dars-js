@@ -15,7 +15,11 @@ console.log("Faqat ismlar:", names);
 
 // 3. Faqat adminlarni ajratish
 const admins = users.filter(user => user.role === "admin");
-console.log("Adminlar:", admins);
+console.log("Adminlar:", admins);         
+
+
+
+
 
 //==========================================================================
 
@@ -26,25 +30,48 @@ const products = [
   { name: "Shoes",      price: 50,   category: "Clothes"     }
 ];
 
+
+
 // 4. Narxlarni 10% arzonlashtirish kere
 const discounted = products.map(product => ({
-  ...product,
+
+  product,
   price: product.price * 0.9
+
+
 }));
+
+
 console.log("10% chegirmali mahsulotlar:", discounted);
+
+
 
 // 5. Faqat Electronics kategoriyasini ajratish kere
 const electronics = products.filter(p => p.category === "Electronics");
+
+
 console.log("Electronics:", electronics);
 
 // =================================================================================================
 
 const userNames = ["ahmad", "bekzod", "dilshod", "elyor"];
 
+
+
+
+
 // 6. Birinchi harfni katta qilish kere
 const capitalized = userNames.map(name => name[0].toUpperCase() + name.slice(1));
+
+
+
 console.log("Bosh harflar katta:", capitalized);
+
+
 
 // 7. Uzunligi 5 dan ko'p ismlar kere
 const longNames = userNames.filter(name => name.length > 5);
+
+
+
 console.log("Uzun ismlar (5+):", longNames);
